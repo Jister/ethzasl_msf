@@ -15,14 +15,14 @@ find_package(catkin REQUIRED COMPONENTS sensor_msgs dynamic_reconfigure msf_timi
 find_package(Eigen REQUIRED)
 
 find_package(Doxygen)
-set(MSF_DOCUMENTATION msf_documentation)
-if(DOXYGEN_FOUND)
-  add_custom_target(${MSF_DOCUMENTATION}
-                    COMMAND doxygen msf_dox.dox
-                    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/../)
-else()
-  add_custom_target(${MSF_DOCUMENTATION})
-endif(DOXYGEN_FOUND)
+#set(MSF_DOCUMENTATION msf_documentation)
+#if(DOXYGEN_FOUND)
+#  add_custom_target(${MSF_DOCUMENTATION}
+#                    COMMAND doxygen msf_dox.dox
+#                    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/../)
+#else()
+#  add_custom_target(${MSF_DOCUMENTATION})
+#endif(DOXYGEN_FOUND)
 
 include_directories(include ${Eigen_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
 
